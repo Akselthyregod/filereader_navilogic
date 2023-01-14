@@ -9,3 +9,14 @@ C:\Users\Aksel\source\repos\filereader_navilogic\filereader_navilogic\obj\Debug\
 C:\Users\Aksel\source\repos\filereader_navilogic\filereader_navilogic\obj\Debug\filereader_navilogic.csproj.CoreCompileInputs.cache
 C:\Users\Aksel\source\repos\filereader_navilogic\filereader_navilogic\obj\Debug\filereader_navilogic.exe
 C:\Users\Aksel\source\repos\filereader_navilogic\filereader_navilogic\obj\Debug\filereader_navilogic.pdb
+C:\Users\Aksel\Documents\filereader_navilogic\filereader_navilogic\bin\Debug\filereader_navilogic.exe.config
+C:\Users\Aksel\Documents\filereader_navilogic\filereader_navilogic\bin\Debug\filereader_navilogic.exe
+C:\Users\Aksel\Documents\filereader_navilogic\filereader_navilogic\bin\Debug\filereader_navilogic.pdb
+C:\Users\Aksel\Documents\filereader_navilogic\filereader_navilogic\obj\Debug\filereader_navilogic.csproj.AssemblyReference.cache
+C:\Users\Aksel\Documents\filereader_navilogic\filereader_navilogic\obj\Debug\filereader_navilogic.csproj.SuggestedBindingRedirects.cache
+C:\Users\Aksel\Documents\filereader_navilogic\filereader_navilogic\obj\Debug\filereader_navilogic.Form1.resources
+C:\Users\Aksel\Documents\filereader_navilogic\filereader_navilogic\obj\Debug\filereader_navilogic.Properties.Resources.resources
+C:\Users\Aksel\Documents\filereader_navilogic\filereader_navilogic\obj\Debug\filereader_navilogic.csproj.GenerateResource.cache
+C:\Users\Aksel\Documents\filereader_navilogic\filereader_navilogic\obj\Debug\filereader_navilogic.csproj.CoreCompileInputs.cache
+C:\Users\Aksel\Documents\filereader_navilogic\filereader_navilogic\obj\Debug\filereader_navilogic.exe
+C:\Users\Aksel\Documents\filereader_navilogic\filereader_navilogic\obj\Debug\filereader_navilogic.pdb

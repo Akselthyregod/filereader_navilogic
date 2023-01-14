@@ -9,17 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Collections;
 
 namespace filereader_navilogic
 {
     public partial class Form1 : Form
     {
 
-        private int count = 0;
+        //private int count = 0;
+        private ListViewColumnSorter lvwColumnSorter;
+
         public Form1()
         {
             InitializeComponent();
             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+           
 
         }
 
@@ -35,7 +39,6 @@ namespace filereader_navilogic
             for (int i = 1; i < line.Length; i++)
             {
                 item.SubItems.Add(line[i]);
-
             }
 
             return item;
@@ -44,6 +47,7 @@ namespace filereader_navilogic
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
             openFileDialog1.InitialDirectory = "c:\\";
@@ -53,6 +57,11 @@ namespace filereader_navilogic
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
+                // clear old data
+                this.listView1.ListViewItemSorter = null;
+                this.listView1.Items.Clear();
+
+
                 string selectedFileName = openFileDialog1.FileName;
 
                 // read file chosen
@@ -84,6 +93,9 @@ namespace filereader_navilogic
                 listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
 
                 label1.Text = "Number of lines loaded:" + lines.Length.ToString();
+               
+                lvwColumnSorter = new ListViewColumnSorter();
+                this.listView1.ListViewItemSorter = lvwColumnSorter;
             }
         }
 
@@ -95,14 +107,33 @@ namespace filereader_navilogic
 
         private void listView1_ColumnClick(object sender, ColumnClickEventArgs e)
         {
-          
-            MessageBox.Show("click");
 
+            https://learn.microsoft.com/en-us/troubleshoot/developer/visualstudio/csharp/language-compilers/sort-listview-by-column
+            // Determine if clicked column is already the column that is being sorted.
+            if (e.Column == lvwColumnSorter.SortColumn)
+            {
+                // Reverse the current sort direction for this column.
+                if (lvwColumnSorter.Order == SortOrder.Ascending)
+                {
+                    lvwColumnSorter.Order = SortOrder.Descending;
+                }
+                else
+                {
+                    lvwColumnSorter.Order = SortOrder.Ascending;
+                }
+            }
+            else
+            {
+                // Set the column number that is to be sorted; default to ascending.
+                lvwColumnSorter.SortColumn = e.Column;
+                lvwColumnSorter.Order = SortOrder.Ascending;
+            }
+
+            // Perform the sort with these new sort options.
+            this.listView1.Sort();
+            
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
         }
     }
-}
